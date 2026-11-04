@@ -20,9 +20,7 @@
 //     }
 // }
 
-
 //===============RECURSION=================
-
 
 // int factorial(int num)
 // {
@@ -54,7 +52,6 @@
 //     return result;
 // }
 
-
 //=================SWAP BY POiNTERS============
 
 void swap(int *x, int *y)
@@ -85,11 +82,11 @@ int main()
     int a = 10;
     int b = 20;
 
-    printf("before swap a=%d and b= %d\n", a, b);
+    printf("before swap a=%d and b=%d\n", a, b);
 
     swap(&a, &b);
 
-    printf("after swap a=%d and b= %d", a, b);
+    printf("after swap a=%d and b=%d", a, b);
 
     //==================================QUESTION 4===========================================
 
