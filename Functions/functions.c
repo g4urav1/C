@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 // void BubbleSort(int arr[], int size)
 // {
@@ -54,12 +55,67 @@
 
 //=================SWAP BY POiNTERS============
 
-void swap(int *x, int *y)
-{
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+// void swap(int *x, int *y)
+// {
+//     int temp = *x;
+//     *x = *y;
+//     *y = temp;
+// }
+
+//===============MIN MAX AVG=====================
+
+// int MinMaxAvg(int *arr, int size)
+// {
+//     int min = INT_MAX;
+//     int max = INT_MIN;
+//     int sum;
+//     for (int i = 0; i < size; i++)
+//     {
+//         if (arr[i] < min)
+//         {
+//             min = arr[i];
+//         }
+//         if (arr[i] > max)
+//         {
+//             max = arr[i];
+//         }
+//         sum = sum + arr[i];
+//     }
+//     int avg = sum / size;
+//     printf("%d\n", min);
+//     printf("%d\n", max);
+//     printf("%d\n", avg);
+// }
+
+//==============CALCULATOR======================
+
+// int Calculator(int op, int *a, int *b)
+// {
+//     int result;
+
+//     if (op == 1)
+//     {
+//         result = *a + *b;
+//     }
+//     else if (op == 2)
+//     {
+//         result = *a - *b;
+//     }
+//     else if (op == 3)
+//     {
+//         result = *a * *b;
+//     }
+//     else if (op == 4)
+//     {
+//         result = *a / *b;
+//     }
+//     else
+//     {
+//         printf("INVALID OPERATION");
+//     }
+
+//     printf("%d", result);
+// }
 
 int main()
 {
@@ -79,18 +135,35 @@ int main()
 
     //==================================QUESTION 3===========================================
 
-    int a = 10;
-    int b = 20;
-
-    printf("before swap a=%d and b=%d\n", a, b);
-
-    swap(&a, &b);
-
-    printf("after swap a=%d and b=%d", a, b);
+    // int a = 10;
+    // int b = 20;
+    // printf("before swap a=%d and b=%d\n", a, b);
+    // swap(&a, &b);
+    // printf("after swap a=%d and b=%d", a, b);
 
     //==================================QUESTION 4===========================================
 
+    // int arr[] = {2, 4, 6, 7, 3, 8};
+    // int size = sizeof(arr) / sizeof(arr[0]);
+    // MinMaxAvg(arr, size);
+
     //==================================QUESTION 5===========================================
+
+    // int op, a, b;
+
+    // printf("1. Add \n");
+    // printf("2. Subtract \n");
+    // printf("3. Multiply\n");
+    // printf("4. Divide\n");
+    // printf("\nEnter Operation: ");
+    // scanf("%d", &op);
+
+    // printf("Enter First Number: ");
+    // scanf("%d", &a);
+    // printf("Enter Second Number: ");
+    // scanf("%d", &b);
+
+    // Calculator(op, &a, &b);
 
     return 0;
 }
