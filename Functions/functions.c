@@ -91,8 +91,7 @@
 
 // int Calculator(int op, int *a, int *b)
 // {
-//     int result;
-
+//     double result;
 //     if (op == 1)
 //     {
 //         result = *a + *b;
@@ -113,8 +112,7 @@
 //     {
 //         printf("INVALID OPERATION");
 //     }
-
-//     printf("%d", result);
+//     printf("%.2f", result);
 // }
 
 int main()
