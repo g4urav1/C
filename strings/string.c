@@ -179,7 +179,6 @@ int main()
     //================QUESTION 7 ====================
 
     // char str1[50], str2[50];
-
     // printf("Enter string: ");
     // fgets(str1, sizeof(str1), stdin);
     // str1[strcspn(str1, "\n")] = '\0';
@@ -191,7 +190,6 @@ int main()
     //     str2[i] = str1[i];
     //     i++;
     // }
-
     // str2[i] = '\0';
 
     // printf("entered string is: %s\n", str1);
@@ -226,13 +224,10 @@ int main()
     //================QUESTION 9 ====================
 
     // char str[50];
-
     // printf("Enter string: ");
     // fgets(str, sizeof(str), stdin);
     // str[strcspn(str, "\n")] = '\0';
-
     // int i = 0, j = 0;
-
     // while (str[i] != '\0')
     // {
     //     if (str[i] != ' ')
@@ -240,12 +235,9 @@ int main()
     //         str[j] = str[i];
     //         j++;
     //     }
-
     //     i++;
     // }
-
     // str[j] = '\0';
-
     // printf("string after removing spaces: %s", str);
 
     //================QUESTION 10 ====================
@@ -271,48 +263,111 @@ int main()
 
     //================QUESTION 11 ====================
 
-    char str[50], result[50];
-    printf("Enter string: ");
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';
-    int i = 0, j = 0;
-
-    while (str[i] != '\0')
-    {
-        for (int k = 0; k < strlen(str); k++)
-        {
-            if (str[k] != str[k + 1])
-            {
-                result[j] = str[k];
-                j++;
-            }
-        }
-        i++;
-    }
-
-    result[j] = '\0';
-    printf("String after removing duplicates: %s\n %s", result ,str);
+    // char str[50], result[50];
+    // printf("Enter string: ");
+    // fgets(str, sizeof(str), stdin);
+    // str[strcspn(str, "\n")] = '\0';
+    // int i = 0, j = 0;
+    // while (str[i] != '\0')
+    // {
+    //     for (i; i < strlen(str); i++)
+    //     {
+    //         if (str[i] != str[i + 1])
+    //         {
+    //             result[j] = str[i];
+    //             j++;
+    //         }
+    //     }
+    // }
+    // result[j] = '\0';
+    // printf("String after removing duplicates: %s", result);
 
     //================QUESTION 12 ====================
 
+    // char str[100], word[50] = "", longest[50] = "";
+    // printf("Enter string:");
+    // fgets(str, sizeof(str), stdin);
+    // str[strcspn(str, "\n")] = '\0';
+    // int i = 0, j = 0;
+    // while (str[i] != '\0')
+    // {
+    //     if (str[i] != ' ' && str[i] != '\0')
+    //     {
+    //         word[j] = str[i];
+    //         j++;
+    //     }
+    //     else
+    //     {
+    //         word[j] = '\0';
+    //         if (strlen(word) > strlen(longest))
+    //         {
+    //             strcpy(longest, word);
+    //         }
+    //         j = 0;
+    //     }
+    //     i++;
+    // }
+    // printf("Longest word in string is: %s", longest);
+
     //================QUESTION 13 ====================
+
+    // char str[100], str2[100];
+    // printf("Enter string: ");
+    // fgets(str, sizeof(str), stdin);
+    // str[strcspn(str, "\n")] = '\0';
+    // printf("Enter string 2: ");
+    // fgets(str2, sizeof(str2), stdin);
+    // str2[strcspn(str2, "\n")] = '\0';
+    // int i = 0, j = 0;
+    // int anagram = 1;
+    // if (strlen(str) != strlen(str2))
+    // {
+    //     anagram = 0;
+    // }
+    // else
+    // {
+    //     for (i = 0; str[i] != '\0'; i++)
+    //     {
+    //         int found = 0;
+    //         for (j = 0; str2[j] != '\0'; j++)
+    //         {
+    //             if (str[i] == str2[j])
+    //             {
+    //                 str2[j] = '*';
+    //                 found = 1;
+    //                 break;
+    //             }
+    //         }
+    //         if (found == 0)
+    //         {
+    //             anagram = 0;
+    //             break;
+    //         }
+    //     }
+    // }
+    // if (anagram)
+    // {
+    //     printf("anagram.");
+    // }
+    // else
+    // {
+    //     printf("not anagram.");
+    // }
 
     //================QUESTION 14 ====================
 
     // char str[100], sub[50];
-
     // printf("Enter main string: ");
     // fgets(str, sizeof(str), stdin);
     // str[strcspn(str, "\n")] = '\0';
-
     // printf("Enter substring: ");
     // fgets(sub, sizeof(sub), stdin);
     // sub[strcspn(sub, "\n")] = '\0';
 
-    // int i, j;
+    // int i = 0, j = 0;
     // int found = 0;
 
-    // for (i = 0; str[i] != '\0' && found == 0; i++)
+    // while (str[i] != '\0')
     // {
     //     j = 0;
 
@@ -326,6 +381,8 @@ int main()
     //         found = 1;
     //         break;
     //     }
+
+    //     i++;
     // }
 
     // if (found)
@@ -338,6 +395,12 @@ int main()
     // }
 
     //================QUESTION 15 ====================
+
+    char str[200], word[100][50];
+
+    printf("Enter main string: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = '\0';
 
     return 0;
 }
