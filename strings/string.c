@@ -397,10 +397,40 @@ int main()
     //================QUESTION 15 ====================
 
     char str[200], word[100][50];
+    int counted[100] = {0};
 
     printf("Enter main string: ");
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';
+
+    int i = 0, j = 0, k = 0;
+
+    while (str[i] != '\0')
+    {
+        while (str[i] == ' ')         
+        {
+            i++;
+        }
+        if (str[i] == '\0')
+        {
+            break;
+        }
+
+        j = 0;
+        while (str[i] != ' ' && str[i] != '\0')
+        {
+            word[k][j] = str[i];
+            i++;
+            j++;
+        }
+        word[k][j] = '\0';
+        k++;
+    }
+
+    for (int i = 0; i < k; i++)
+    {
+        printf("%s\n", word[i]);
+    }
 
     return 0;
 }
