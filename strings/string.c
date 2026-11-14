@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main()
 {
@@ -182,16 +183,13 @@ int main()
     // printf("Enter string: ");
     // fgets(str1, sizeof(str1), stdin);
     // str1[strcspn(str1, "\n")] = '\0';
-
     // int i = 0;
-
     // while (str1[i] != '\0')
     // {
     //     str2[i] = str1[i];
     //     i++;
     // }
     // str2[i] = '\0';
-
     // printf("entered string is: %s\n", str1);
     // printf("Copied string is: %s", str2);
 
@@ -397,7 +395,6 @@ int main()
     //================QUESTION 15 ====================
 
     char str[200], word[100][50];
-    int counted[100] = {0};
 
     printf("Enter main string: ");
     fgets(str, sizeof(str), stdin);
@@ -407,7 +404,7 @@ int main()
 
     while (str[i] != '\0')
     {
-        while (str[i] == ' ')         
+        while (str[i] == ' ')
         {
             i++;
         }
@@ -415,11 +412,10 @@ int main()
         {
             break;
         }
-
         j = 0;
         while (str[i] != ' ' && str[i] != '\0')
         {
-            word[k][j] = str[i];
+            word[k][j] = tolower(str[i]);
             i++;
             j++;
         }
@@ -427,10 +423,24 @@ int main()
         k++;
     }
 
+    int count[k];
+    int counted[k];
+
     for (int i = 0; i < k; i++)
     {
-        printf("%s\n", word[i]);
-    }
+        if (counted[i] == 1)
+            continue;
+        count[i] = 1;
+        for (int j = i + 1; j < k; j++)
+        {
+            if (strcmp(word[i], word[j]) == 0)
+            {
+                count[i] = count[i] + 1;
+                counted[j] = 1;
+            }
+        }
+        printf("%s\t count: %d\n", word[i], count[i]);
+    };
 
     return 0;
 }
