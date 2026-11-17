@@ -29,10 +29,6 @@ int main() {
     // 2. calloc()
     int *ptr2 = (int*)calloc(n, sizeof(int));
 
-    if (ptr2 == NULL) {
-        free(ptr);
-        return 1;
-    }
 
     printf("\n\nUsing calloc:\n");
     for (i = 0; i < n; i++) {
@@ -42,10 +38,6 @@ int main() {
     // 3. realloc()
     ptr = (int*)realloc(ptr, (n + 2) * sizeof(int));
 
-    if (ptr == NULL) {
-        free(ptr2);
-        return 1;
-    }
 
     printf("\n\nEnter 2 more elements:\n");
     for (i = n; i < n + 2; i++) {
