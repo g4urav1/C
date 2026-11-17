@@ -17,7 +17,6 @@ int main()
     // int size = (sizeof(ch) / sizeof(ch[0]));
     // char *start = &ch[0], *end = &ch[size - 1];
     // char temp;
-
     // while (start < end)
     // {
     //     temp = *start;
@@ -26,7 +25,6 @@ int main()
     //     start++;
     //     end--;
     // }
-
     // for (int i = 0; i < size; i++)
     // {
     //     printf("%c", ch[i]);
@@ -36,16 +34,13 @@ int main()
 
     // char ch[] = "check number of vowels and consonants";
     // int vow = 0, con = 0;
-
     // for (int i = 0; ch[i] != '\0'; i++)
     // {
     //     char letter = ch[i];
-
     //     if (ch[i] <= 90 && ch[i] >= 65)
     //     {
     //         letter = ch[i] = ch[i] + 32;
     //     }
-
     //     if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u')
     //     {
     //         vow++;
@@ -59,7 +54,6 @@ int main()
     //         con++;
     //     }
     // }
-
     // printf("vowels: %d\n", vow);
     // printf("consonants: %d", con);
 
@@ -67,7 +61,6 @@ int main()
 
     // char ch[] = "count the no of words in this sentence";
     // int words = 0;
-
     // for (int i = 0; ch[i] != '\0'; i++)
     // {
     //     if (ch[i] != ' ' && (i == 0 || ch[i - 1] == ' '))
@@ -75,7 +68,6 @@ int main()
     //         words++;
     //     }
     // }
-
     // printf("WORDS: %d\n", words);
 
     //================QUESTION 5 ===================
@@ -361,28 +353,22 @@ int main()
     // printf("Enter substring: ");
     // fgets(sub, sizeof(sub), stdin);
     // sub[strcspn(sub, "\n")] = '\0';
-
     // int i = 0, j = 0;
     // int found = 0;
-
     // while (str[i] != '\0')
     // {
     //     j = 0;
-
     //     while (sub[j] != '\0' && str[i + j] == sub[j])
     //     {
     //         j++;
     //     }
-
     //     if (sub[j] == '\0')
     //     {
     //         found = 1;
     //         break;
     //     }
-
     //     i++;
     // }
-
     // if (found)
     // {
     //     printf("Substring found.");
