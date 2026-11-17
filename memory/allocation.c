@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+int main()
+{
     int n, i;
     int *ptr;
 
@@ -9,43 +10,52 @@ int main() {
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
-    ptr = (int*)malloc(n * sizeof(int));
+    ptr = (int *)malloc(n * sizeof(int));
 
-    if (ptr == NULL) {
+    if (ptr == NULL)
+    {
         printf("Memory allocation failed!");
         return 1;
     }
 
     printf("\nEnter %d elements:\n", n);
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         scanf("%d", &ptr[i]);
     }
 
     printf("\nUsing malloc:\n");
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         printf("%d ", ptr[i]);
     }
 
     // 2. calloc()
-    int *ptr2 = (int*)calloc(n, sizeof(int));
-
+    int *ptr2 = (int *)calloc(n, sizeof(int));
 
     printf("\n\nUsing calloc:\n");
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         printf("%d ", ptr2[i]);
     }
 
     // 3. realloc()
-    ptr = (int*)realloc(ptr, (n + 2) * sizeof(int));
+    int e;
 
+    printf("\n\nEnter number of elements you want to add: ");
+    scanf("%d", &e);
 
-    printf("\n\nEnter 2 more elements:\n");
-    for (i = n; i < n + 2; i++) {
+    ptr = (int *)realloc(ptr, (n + e) * sizeof(int));
+
+    printf("\n\nEnter %d element:\n", e);
+    for (i = n; i < n + e; i++)
+    {
         scanf("%d", &ptr[i]);
     }
 
     printf("\nAfter realloc:\n");
-    for (i = 0; i < n + 2; i++) {
+    for (i = 0; i < n + e; i++)
+    {
         printf("%d ", ptr[i]);
     }
 
