@@ -1,1 +1,2 @@
-100|atomic habits|james clear|5
+101|Atomic Habits|James Clear|10
+102|Harry Potter and the Philosopher's Stone|J.K. Rowling|7
